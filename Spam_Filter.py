@@ -48,9 +48,6 @@ def log_probs(email_paths, smoothing):
 class SpamFilter(object):
 
     def __init__(self, spam_dir, ham_dir, smoothing):
-        #spam_files = ['homework5_data/train/spam/' + x for x in os.listdir(spam_dir)]
-        #ham_files = ['homework5_data/train/ham/' + x for x in os.listdir(ham_dir)]
-
         spam_files = [os.path.join(spam_dir, x) for x in os.listdir(spam_dir)]
         ham_files = [os.path.join(ham_dir, x) for x in os.listdir(ham_dir)]
         
@@ -110,17 +107,4 @@ class SpamFilter(object):
         return ham_indic[:n]
 
 ############################################################
-# Section 2: Feedback
-############################################################
 
-feedback_question_1 = """
-10 hours
-"""
-
-feedback_question_2 = """
-The hardest part was realizing how to change the formula in part 4 so that I could use the log probs from earlier
-"""
-
-feedback_question_3 = """
-I liked the most indicative spam/ham part.
-"""
