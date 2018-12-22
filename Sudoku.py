@@ -178,24 +178,8 @@ class Sudoku(object):
                 boards += list(self.successors())
 
 ############################################################
-# Section 2: Feedback
-############################################################
 
-feedback_question_1 = """
-About 8 hours
-"""
-
-feedback_question_2 = """
-The improved inference was the hardest part. It was hard to figure out how to implement a function
-to check if a cell's set contained any values not found in its neighbors' sets.
-"""
-
-feedback_question_3 = """
-I liked that each successive function used the ones that came before as a subroutine. One thing
-I would change is the wording on the remove_inconsistent_values description, as it is confusing.
-"""
-
-b = read_board("sudoku/sparse.txt")
+b = read_board("sudoku/hardest.txt")
 s = Sudoku(b)
 
 from datetime import datetime
